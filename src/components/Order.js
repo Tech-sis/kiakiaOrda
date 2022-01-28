@@ -1,34 +1,47 @@
-import { List, Card, Avatar } from 'antd'
+import { Table, Input } from 'antd'
 import React from 'react'
+import styles from '../styles/style.module.css'
+
+const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+    responsive: ['md']
+  },
+  {
+    title: 'Quantity',
+    dataIndex: 'qty',
+    key: 'qty',
+  },
+  {
+    title: 'Product',
+    dataIndex: 'product',
+    key: 'product',
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    render: (text) => <Input placeholder='0' name='price' type='number' />,
+  },
+]
 
 const data = []
-for (let i = 0; i <= 5; i++) {
+for (let i = 1; i < 5; i++) {
   data.push({
     key: i,
-    title: `Customer ${i}`,
-    product: 'Product Name',
-    qty: '32',
+    name: `Customer ${i}`,
+    qty: 32,
+    product: `Bag`,
   })
 }
 
 const Order = () => {
   return (
-    <>
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={(item) => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title={<h6>{item.title}</h6>}
-              description={<span>{item.product}</span>}
-            />
-            {item.qty}
-          </List.Item>
-        )}
-      />
-    </>
+    <div className={styles.orderContainer}>
+    <div className={styles.orderDetails}>Order Details</div>
+      <Table columns={columns} dataSource={data} size='small'/>
+    </div>
   )
 }
 

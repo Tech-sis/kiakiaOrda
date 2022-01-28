@@ -4,35 +4,36 @@
     box-sizing: border-box;
 }
 .hero{
-    margin: 100px 100px 36px;
+    margin: 80px 30px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 38px;
+    padding: 10px;
 }
 .img{
-    width: 550px;
+    width: 300px;
 }
 .heroContent{
-    padding: 10px 70px 10px 0;
+    padding: 10px 0px 10px 0;
 }
 
 .heroContent h3 {
-    font-size: 52px;
+    font-size: 32px;
     font-weight: 900;
 }
 
 .heroContent p {
-    font-size: 24px;
+    font-size: 14px;
+    text-align: left;
 }
 .cardContainer{
-    background-color: #00296b;
     padding: 50px;
+    padding: 0;
+    background-color: black;
 }
 .cardContainer h2 {
     text-align: center;
-    margin: 20px auto 50px;
-    font-size: 24px;
+    font-size: 18px;
     color: white;
     text-transform: uppercase;
 }
@@ -40,6 +41,107 @@
     text-align: center;
 }
 .requestInfo{
-    margin: 50px 130px;
+    margin: 50px;
     display: block;
+}
+.formContainer{
+    background: #00296b;
+    width: 65%;
+}
+.orderContainer{
+    margin: 80px 10px;
+}
+.orderDetails{
+    font-size: 32px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+@media screen and (min-width: 320px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .formContainer {
+        width: 100%;
+    }
+    .style_heroContent__rUYCU h3 {
+        font-size: 32px;
+    }
+    /* .img {
+        width: 250px;
+    } */
+}
+
+@media screen and (min-width: 680px) {
+    .hero {
+        flex-direction: column;
+        padding: 38px;
+    }
+    .formContainer {
+        width: 100%;
+    }
+    .img {
+        width: 450px;
+    }
+    .cardContainer {
+        padding: 50px;
+    }
+    .cardContainer h2 {
+        font-size: 24px;
+        margin: 20px auto 50px;
+    }
+    .requestInfo {
+        margin: 50px 130px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        flex-direction: row;
+    }
+    .formContainer {
+        width: 78%;
+    }
+    .orderContainer {
+        margin: 80px 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .img{
+        width: 450px;
+    }
+    .heroContent {
+        padding: 10px 70px 10px 0;
+    }
+    .heroContent h3{
+        font-size: 42px;
+    }
+    .heroContent p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1370px) {
+    .img{
+        width: 550px;
+    }
+    .heroContent h3 {
+        font-size: 52px;
+        font-weight: 900;
+    }
+    .hero{
+        margin: 100px 100px 36px;
+    }
+    .heroContent p {
+        font-size: 24px;
+    }
+    .formContainer {
+        width: 65%;
+    }
+
 }

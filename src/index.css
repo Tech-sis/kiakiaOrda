@@ -1,8 +1,11 @@
 @import 'antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
 
-.ant-card-body {
-  padding: 24px 330px;
+body{
+  font-family: 'Playfair Display',
+  serif;
 }
+
 .ant-layout-header {
   background: white;
 }
@@ -67,4 +70,33 @@
 }
 .ant-menu-horizontal>.ant-menu-item a {
   color: #00296b;
+}
+/* .ant-form {
+  width: max-content;
+} */
+.ant-table-thead>tr>th {
+  font-weight: 700;
+  font-size: 24px;
+}
+.ant-table-thead>tr>th,
+.ant-table-tbody>tr>td,
+.ant-table tfoot>tr>th,
+.ant-table tfoot>tr>td {
+  font-size: 24px;
+}
+.ant-form .ant-form-item .ant-form-item-label,
+.ant-form .ant-form-item .ant-form-item-control {
+  max-width: 70%;
+}
+
+@media screen and (min-width: 680px) {
+  .ant-card-body {
+    padding: 24px 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ant-card-body {
+    padding: 24px 130px;
+  }
 }
