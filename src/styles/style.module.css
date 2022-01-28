@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    margin: 100px 100px 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 38px;
+}
+.img{
+    width: 550px;
+}
+.heroContent{
+    padding: 10px 70px 10px 0;
+}
+
+.heroContent h3 {
+    font-size: 52px;
+    font-weight: 900;
+}
+
+.heroContent p {
+    font-size: 24px;
+}
+.cardContainer{
+    background-color: #00296b;
+    padding: 50px;
+}
+.cardContainer h2 {
+    text-align: center;
+    margin: 20px auto 50px;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+}
+.footer{
+    text-align: center;
+}
+.requestInfo{
+    margin: 50px 130px;
+    display: block;
+}
