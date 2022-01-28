@@ -21,13 +21,10 @@ const CreateOrder = () => {
     form.setFieldsValue({ sights: [] })
   }
 
-  // function handleClick(e) {
-  //   // setShowName(name)
-  //   // setShowProduct(product)
-  //   // setShowQty(qty)
-  //   // setOrder(order)
-  //   e.preventDefault()
-  // }
+  function handleClick(e) {
+    setOrder(order)
+    e.preventDefault()
+  }
 
   return (
     <>
@@ -140,7 +137,7 @@ const CreateOrder = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                // onClick={handleClick}
+                onClick={handleClick}
                 style={{
                   height: '50px',
                   borderRadius: '4px',
